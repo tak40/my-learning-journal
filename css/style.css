@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    /* outline: 1px dotted red; */
+}
+
+/* ----- LAYOUT ----- */
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.recent-posts-container {
+    padding-top: 1em;
+}
+
+.header-container,
+.recent-posts-container,
+.featured-post,
+.featured-post-header-text,
+.about-me-top-container,
+.about-me-bottom-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* ----- HEADER ----- */
+
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0;
+}
+
+.header-logo {
+    width: 1.5em;
+}
+
+.header-title {
+    flex: 1;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.header-container,
+    nav ul {
+        display: flex;
+}
+
+
+/* ----- NAVIGATION ----- */
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.85em 0;
+    display: block;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    text-transform: uppercase;
+    padding: 0 0.75rem;
+    transition: color 0.3s ease;
+}
+
+article a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.view-more {
+    margin: 0 0 2.5em 0;
+    font-size: 1.125em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+main a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+}
+
+main article a:hover {
+    color: gray;
+}
+
+.view-more:hover {
+    color: gray;
+}
+
+
+
+/* ----- MAIN ----- */
+
+.featured-post-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: #9480e4 url(images/article-image-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5em 0 1em 0;
+    margin-bottom: 1em;
+}
+
+.featured-post-date {
+    font-size: 0.9em;
+    margin-top: 1.5em;
+}
+
+.featured-post-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.recent-posts-date {
+    font-size: 0.8em;
+}
+
+.blog-post-container {
+    padding-bottom: 1.5em;
+}
+
+.blog-title {
+    margin: 0;
+    font-size: 1.35em;
+}
+
+p {
+    line-height: 1.3;
+}
+
+
+
+/* ----- FOOTER ----- */
+
+footer {
+    text-align: center;
+    background: black;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text{
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 2.5em 0 0.25em;
+}
+
+.footer-copyright {
+    color: #D7D7D7 ;
+    font-size: 0.8em;
+    margin: 0.25em 0 2.5em;
+}
+
+
+/* ----- FEATURED POST HTML -----  */
+
+.featured-post-top-container {
+    padding-bottom: 1.5em;
+}
+
+span {
+    display: block;
+    padding: 1em 0;
+    font-size: 1.125em;
+}
+
+.recent-posts-header {
+    font-size: 1.25em;
+    text-align: center;
+    margin: 3em 0 1em;
+}
+
+
+/* ----- ABOUT ME HTML ----- */
+
+.about-me-top-container,
+.about-me-bottom-container {
+    margin-bottom: 2em;
+}
+
+.roku-img {
+    width: 50%;
+    margin: 1.5em 0;
+    max-width: 250px;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* ----- MOBILE PHONE ----- */
+
+@media (min-width: 480px) {
+    .recent-posts-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5em;
+    }
+}
+
+/* ----- TABLET ----- */
+
+@media (min-width: 768px) {
+    .recent-posts-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.75em;
+    }
+    
+    .header-logo {
+        width: 2em;
+    }
+    
+    .header-title {
+        font-size: 1.75em;
+    }
+    
+    nav a {
+        font-size: 1.125em;
+    }
+    
+    .featured-post-date {
+        font-size: 1em;
+    }
+    
+    .featured-post-container {
+        min-height: 400px;
+    }
+
+    .recent-posts-container {
+        padding: 1.75em 0 1.25em 0;
+    }
+    
+    .recent-posts-date {
+        font-size: 1em;
+        margin: 0.7em 0;
+    }
+    
+    p {
+        font-size: 1.125em;
+    }
+    
+    /* ----- FOOTER ----- */
+    
+    footer {
+        padding: 1em 0;        
+    }
+    
+    .footer-text,
+    .footer-copyright {
+        font-size: 1em;
+    }
+    
+    .footer-text {
+        margin: 2em 0 0.5em;
+    }
+    
+    .footer-copyright {
+        margin: 0.5em 0 2em;
+    }
+    
+    /* ----- FEATURED POST HTML ----- */
+    
+    .featured-post {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .featured-post-top-container,
+    .featured-post-bottom-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    
+    /* ----- ABOUT ME HTML ----- */
+    
+    .about-me-top-container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }   
+    
+    .about-me-bottom-container {
+        width: 80%;
+    }
+    
+    .roku-img {
+        width: 100%;
+        padding-right: 1.5em;
+        margin: 0;
+        min-width: 250px;
+        max-width: 500px;
+    }
+}
+
+
+
+/* ----- DESKTOP ----- */
+
+@media (min-width: 1024px) {
+    .recent-posts-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+    }
+    
+    .featured-post-container {
+        min-height: 500px;
+    }
+
+    .featured-post-header-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "date date ."
+            "header header ."
+            "content content ."
+    }
+    
+    .featured-post-date {
+        grid-area: date;
+        font-size: 1.125em;
+    }
+    
+    .featured-post-title {
+        grid-area: header;
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
+    
+    .featured-post-text {
+        grid-area: content;
+        font-size: 1.25em;
+    }
+
+    
+    .recent-posts-container {
+        padding: 2.875em 0 1.5em 0;
+    }
+    
+    .recent-posts-date {
+        font-size: 1em;
+        margin: 0.9em 0;
+    }
+    
+    .recent-posts-header {
+        font-size: 1.5em;
+    }
+    
+    
+    
+    /* ----- ABOUT ME HTML ----- */
+    
+    .about-me-top-container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+        margin-bottom: 3em;
+    }   
+    
+    .roku-img {
+        width: 100%;
+        padding-right: 1.5em;
+        margin: 0;
+    }
+}
