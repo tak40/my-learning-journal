@@ -116,7 +116,7 @@ main article a:hover {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background: #9480e4 url(images/article-image.png);
+    background: #9480e4 url(images/article-image-hero.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
