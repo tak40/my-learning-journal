@@ -1,4 +1,4 @@
-# codeb4f12bb31d276436c7917
+# My Learning Journal
 
 Quick start:
 
